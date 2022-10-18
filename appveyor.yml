@@ -1,0 +1,24 @@
+platform:
+  - x86
+  - x64
+
+configuration:
+  - Release
+
+image:
+  - Visual Studio 2017
+  - Ubuntu
+
+# Clone third-party submodules, such as asar
+# Appveyor does not clone recursively.
+install:
+  - git submodule update --init --recursive
+
+before_build:
+  - mkdir build
+  - cd build
+  - cmake ..  
+
+build_script:
+  - cd build
+  - cmake --build . 

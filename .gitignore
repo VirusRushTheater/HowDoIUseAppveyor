@@ -1,3 +1,7 @@
+# Omitting whatever we will generate with CMake
+build/
+**/build/
+
 # Prerequisites
 *.d
 
