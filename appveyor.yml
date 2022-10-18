@@ -20,5 +20,4 @@ before_build:
   - cmake ..  
 
 build_script:
-  - cd build
   - cmake --build . 
