@@ -17,7 +17,9 @@ install:
 before_build:
   - mkdir build
   - cd build
-  - sh: cmake -DCMAKE_BUILD_TYPE=${CONFIG} ..  
+  - cmake ..
+  - sh: echo ${CONFIGURATION}  
+  - ps: echo %CONFIGURATION%  
 
 build_script:
   - cmake --build . 
